@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,37 +10,59 @@ export function Hero() {
         <section className="relative min-h-[90vh] flex flex-col justify-center px-6 lg:px-12 py-24 overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,oklch(0.42_0_0/0.03),transparent_70%)]" />
 
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="max-w-4xl z-10"
-            >
-                <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 border border-primary/20">
-                    Senior Product Manager
-                </span>
+            <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center z-10">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <span className="inline-block px-3 py-1 rounded-full bg-foreground/10 text-foreground text-[10px] uppercase tracking-widest font-bold mb-6 border border-border/50">
+                        Senior Product Manager
+                    </span>
 
-                <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-[1.1]">
-                    15 Years of <br />
-                    <span className="text-muted-foreground italic tracking-tighter">Large-Scale Transformation.</span>
-                </h1>
+                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-[1.1]">
+                        15 Years of <br />
+                        <span className="text-muted-foreground italic tracking-tighter">Large-Scale Transformation.</span>
+                    </h1>
 
-                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed transition-colors mb-10 max-w-2xl">
-                    Leading 0-1 and 1-N product development for high-impact environments. Managing
-                    <span className="text-foreground font-semibold"> $130M+ budgets </span> and delivering secure, user-centered modernization for the
-                    <span className="text-foreground"> Federal and Private sectors.</span>
-                </p>
+                    <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed transition-colors mb-10 max-w-2xl">
+                        Leading 0-1 and 1-N product development for high-impact environments. Managing
+                        <span className="text-foreground font-semibold"> $130M+ budgets </span> and delivering secure, user-centered modernization for the
+                        <span className="text-foreground"> Federal and Private sectors.</span>
+                    </p>
 
-                <div className="flex flex-wrap gap-4">
-                    <Button size="lg" className="rounded-full px-8 h-12 text-base bg-foreground text-background hover:bg-muted-foreground">
-                        Strategy & Impact
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                    <Button variant="outline" size="lg" className="rounded-full px-8 h-12 text-base border-border hover:bg-secondary/20">
-                        Professional Experience
-                    </Button>
-                </div>
-            </motion.div>
+                    <div className="flex flex-wrap gap-4">
+                        <Button size="lg" className="rounded-full px-8 h-12 text-base bg-foreground text-background hover:bg-muted-foreground">
+                            Strategy & Impact
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                        <Button variant="outline" size="lg" className="rounded-full px-8 h-12 text-base border-border hover:bg-secondary/20">
+                            Experience
+                        </Button>
+                    </div>
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1, delay: 0.2 }}
+                    className="relative hidden lg:block"
+                >
+                    <div className="relative aspect-[3/4] max-w-md mx-auto overflow-hidden rounded-2xl border border-border/30 bg-card/20 shadow-2xl">
+                        <Image
+                            src="/profile-portrait.jpg"
+                            alt="Ben Yoo - Senior Product Manager"
+                            fill
+                            className="object-cover grayscale contrast-125"
+                            priority
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
+                    </div>
+                    {/* Decorative element */}
+                    <div className="absolute -bottom-6 -right-6 w-32 h-32 border-r-2 border-b-2 border-foreground/20 rounded-br-2xl -z-10" />
+                    <div className="absolute -top-6 -left-6 w-32 h-32 border-l-2 border-t-2 border-foreground/20 rounded-tl-2xl -z-10" />
+                </motion.div>
+            </div>
 
             <motion.div
                 initial={{ opacity: 0 }}
