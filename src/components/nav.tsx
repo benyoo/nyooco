@@ -34,7 +34,7 @@ export function Nav() {
                 <div className="w-8 h-8 rounded-lg bg-foreground flex items-center justify-center text-background group-hover:rotate-12 transition-transform">
                     B
                 </div>
-                <span className="hidden sm:inline font-mono tracking-[0.2em] text-sm">BENYOO.CO</span>
+                <span className="hidden sm:inline font-mono tracking-[0.2em] text-sm">BEN YOO</span>
             </Link>
 
             <div className="flex items-center gap-8">
