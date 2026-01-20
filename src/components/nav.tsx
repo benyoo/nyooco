@@ -10,6 +10,7 @@ const navItems = [
     { label: "Experience", href: "#experience" },
     { label: "Certifications", href: "#governance-security" },
     { label: "Domains", href: "#tech-stack" },
+    { label: "Contact", href: "#contact" },
 ];
 
 export function Nav() {

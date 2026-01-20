@@ -4,6 +4,7 @@ import { StrategyImpact } from "@/components/strategy-impact";
 import { Experience } from "@/components/experience";
 import { GovernanceSecurity } from "@/components/governance-security";
 import { TechStack } from "@/components/tech-stack";
+import { Contact } from "@/components/contact";
 
 export default function Home() {
   return (
@@ -15,10 +16,8 @@ export default function Home() {
         <Experience />
         <GovernanceSecurity />
         <TechStack />
+        <Contact />
       </main>
-      <footer className="px-6 lg:px-12 py-12 border-t border-border/50 text-center text-sm text-muted-foreground">
-        <p>© {new Date().getFullYear()} Ben Yoo. All rights reserved. Architected for Performance.</p>
-      </footer>
     </div>
   );
 }

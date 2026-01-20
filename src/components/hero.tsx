@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -32,12 +33,15 @@ export function Hero() {
                     </p>
 
                     <div className="flex flex-wrap gap-4">
-                        <Button size="lg" className="rounded-full px-8 h-12 text-base bg-foreground text-background hover:bg-muted-foreground">
-                            Highlights
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
-                        <Button variant="outline" size="lg" className="rounded-full px-8 h-12 text-base border-border hover:bg-secondary/20">
-                            Experience
+                        <Button
+                            asChild
+                            size="lg"
+                            className="rounded-full px-10 h-14 text-lg bg-foreground text-background hover:bg-muted-foreground transition-all duration-300"
+                        >
+                            <Link href="#contact">
+                                Let&apos;s Connect
+                                <ArrowRight className="ml-2 h-5 w-5" />
+                            </Link>
                         </Button>
                     </div>
                 </motion.div>
