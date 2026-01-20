@@ -6,7 +6,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-    { label: "Impact", href: "#strategy-impact" },
+    { label: "Highlights", href: "#strategy-impact" },
     { label: "Experience", href: "#experience" },
     { label: "Governance", href: "#governance-security" },
     { label: "Domains", href: "#tech-stack" },
@@ -34,7 +34,7 @@ export function Nav() {
                 <div className="w-8 h-8 rounded-lg bg-foreground flex items-center justify-center text-background group-hover:rotate-12 transition-transform">
                     B
                 </div>
-                <span className="hidden sm:inline font-mono tracking-[0.2em] text-sm">BEN YOO</span>
+                <span className="hidden sm:inline font-mono tracking-[0.2em] text-sm">BENYOO</span>
             </Link>
 
             <div className="flex items-center gap-8">

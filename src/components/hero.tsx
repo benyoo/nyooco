@@ -25,15 +25,15 @@ export function Hero() {
                         <span className="text-muted-foreground italic tracking-tighter">Large-Scale Transformation.</span>
                     </h1>
 
-                    <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed transition-colors mb-10 max-w-2xl">
-                        Leading 0-1 and 1-N product development for high-impact environments. Managing
-                        <span className="text-foreground font-semibold"> $130M+ budgets </span> and delivering secure, user-centered modernization for the
-                        <span className="text-foreground"> Federal and Private sectors.</span>
+                    <p className="text-xl md:text-2xl text-muted-foreground font-medium leading-tight mb-10 max-w-2xl whitespace-pre-line">
+                        I make things work,{"\n"}
+                        I make things work better,{"\n"}
+                        I make things work better quickly.
                     </p>
 
                     <div className="flex flex-wrap gap-4">
                         <Button size="lg" className="rounded-full px-8 h-12 text-base bg-foreground text-background hover:bg-muted-foreground">
-                            Strategy & Impact
+                            Highlights
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                         <Button variant="outline" size="lg" className="rounded-full px-8 h-12 text-base border-border hover:bg-secondary/20">

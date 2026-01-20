@@ -34,7 +34,7 @@ export function StrategyImpact() {
         <section id="strategy-impact" className="px-6 lg:px-12 py-24 bg-card/30">
             <div className="max-w-6xl mx-auto">
                 <div className="mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Strategy & Impact</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Highlights</h2>
                     <div className="h-1 w-24 bg-foreground rounded-full" />
                 </div>
 
