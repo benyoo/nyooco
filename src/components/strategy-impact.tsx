@@ -3,29 +3,29 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { TrendingUp, Cpu, Network } from "lucide-react";
+import { TrendingUp, Cpu, Network, ShieldCheck } from "lucide-react";
 
 const caseStudies = [
     {
-        title: "Federal Modernization Strategy",
-        description: "Led the migration of legacy mainframe systems to cloud-native architecture for a $50M agency initiative.",
-        impact: "35% reduction in operational cost",
-        tags: ["Cloud-Native", "Scalability", "ZTA"],
-        icon: <Network className="h-6 w-6 text-primary" />,
+        title: "Online Passport Renewal",
+        description: "Scaled service to 70k applications per week for the U.S. State Dept. Aligned cross-functional teams to a unified KPI framework.",
+        impact: "20% reduction in fulfillment time",
+        tags: ["Scale", "KPI Architecture", "Modernization"],
+        icon: <Network className="h-6 w-6 text-foreground" />,
     },
     {
-        title: "Enterprise MLOps Adoption",
-        description: "Architected a secure ML pipeline for predictive maintenance, managing cross-functional teams of 40+.",
-        impact: "85% faster deployment cycles",
-        tags: ["MLOps", "AI Strategy", "DevSecOps"],
-        icon: <Cpu className="h-6 w-6 text-primary" />,
+        title: "STIG Vulnerability Platform",
+        description: "Leading 0-to-1 rollout of an automated remediation platform for DOD solutions. Reduced manual overhead significantly.",
+        impact: "40% faster vulnerability mitigation",
+        tags: ["Security", "Automation", "GovCloud"],
+        icon: <ShieldCheck className="h-6 w-6 text-foreground" />,
     },
     {
-        title: "Digital Transformation ROI",
-        description: "Orchestrated a global procurement overhaul, consolidating $100M+ in spend across multiple business units.",
-        impact: "$12M annual cost avoidance",
-        tags: ["ROI Architecture", "Optimization", "FinOps"],
-        icon: <TrendingUp className="h-6 w-6 text-primary" />,
+        title: "Large-Scale PMO Modernization",
+        description: "Orchestrated risk mitigation and schedule planning for 15+ Veterans Health Administration projects.",
+        impact: "6 months avg. schedule acceleration",
+        tags: ["Risk Management", "PMO", "Efficiency"],
+        icon: <TrendingUp className="h-6 w-6 text-foreground" />,
     },
 ];
 
@@ -35,7 +35,7 @@ export function StrategyImpact() {
             <div className="max-w-6xl mx-auto">
                 <div className="mb-16">
                     <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Strategy & Impact</h2>
-                    <div className="h-1 w-24 bg-primary rounded-full" />
+                    <div className="h-1 w-24 bg-foreground rounded-full" />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -47,9 +47,9 @@ export function StrategyImpact() {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.5 }}
                         >
-                            <Card className="bg-background/40 border-border/50 hover:border-primary/50 transition-all duration-300 group">
+                            <Card className="bg-background/40 border-border/50 hover:border-foreground/50 transition-all duration-300 group">
                                 <CardContent className="p-8">
-                                    <div className="mb-6 bg-primary/10 w-12 h-12 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                                    <div className="mb-6 bg-foreground/10 w-12 h-12 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                                         {study.icon}
                                     </div>
                                     <h3 className="text-xl font-bold mb-4">{study.title}</h3>

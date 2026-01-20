@@ -1,6 +1,7 @@
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { StrategyImpact } from "@/components/strategy-impact";
+import { Experience } from "@/components/experience";
 import { GovernanceSecurity } from "@/components/governance-security";
 import { TechStack } from "@/components/tech-stack";
 
@@ -11,6 +12,7 @@ export default function Home() {
       <main>
         <Hero />
         <StrategyImpact />
+        <Experience />
         <GovernanceSecurity />
         <TechStack />
       </main>

@@ -7,13 +7,13 @@ const credentials = [
     {
         title: "Project Management Professional (PMP)",
         issuer: "PMI",
-        description: "Expert level oversight of large-scale infrastructure projects.",
+        description: "Cert #3130356 | Expert oversight of $130M+ infrastructure portfolios.",
         icon: <Award className="h-5 w-5" />,
     },
     {
         title: "Certified Information Security Manager (CISM)",
         issuer: "ISACA",
-        description: "Ensuring high-governance and regulatory compliance in product development.",
+        description: "Cert #252776744 | Governance and regulatory compliance in secure apps.",
         icon: <ShieldCheck className="h-5 w-5" />,
     },
 ];
@@ -36,12 +36,12 @@ export function GovernanceSecurity() {
                     <div className="space-y-6">
                         {credentials.map((cred, index) => (
                             <div key={cred.title} className="flex gap-6 items-start">
-                                <div className="mt-1 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                                <div className="mt-1 w-10 h-10 rounded-full bg-foreground/10 flex items-center justify-center text-foreground flex-shrink-0">
                                     {cred.icon}
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-lg mb-1">{cred.title}</h4>
-                                    <p className="text-sm text-muted-foreground">{cred.description}</p>
+                                    <p className="text-sm text-muted-foreground italic">{cred.description}</p>
                                 </div>
                             </div>
                         ))}
@@ -52,23 +52,23 @@ export function GovernanceSecurity() {
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    className="relative aspect-square lg:aspect-video rounded-2xl bg-gradient-to-br from-secondary/50 via-background to-background p-1 border border-border/50 overflow-hidden"
+                    className="relative aspect-square lg:aspect-video rounded-2xl bg-gradient-to-br from-secondary/30 via-background to-background p-1 border border-border/50 overflow-hidden"
                 >
-                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-10">
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
                         <Lock className="w-64 h-64" />
                     </div>
                     <div className="relative h-full w-full bg-background/80 rounded-[calc(var(--radius)-4px)] p-8 flex flex-col justify-center">
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="w-3 h-3 rounded-full bg-red-500/50" />
-                            <div className="w-3 h-3 rounded-full bg-amber-500/50" />
-                            <div className="w-3 h-3 rounded-full bg-emerald-500/50" />
-                            <span className="ml-2 text-xs font-mono text-muted-foreground uppercase tracking-widest">Secure Development Lifecycle</span>
+                            <div className="w-2 h-2 rounded-full bg-foreground/20" />
+                            <div className="w-2 h-2 rounded-full bg-foreground/40" />
+                            <div className="w-2 h-2 rounded-full bg-foreground/60" />
+                            <span className="ml-2 text-[10px] font-mono text-muted-foreground uppercase tracking-widest">Secure Product Lifecycle</span>
                         </div>
-                        <div className="space-y-4 font-mono text-sm text-primary/80">
-                            <p>{">"} STIG Compliance: 100%</p>
-                            <p>{">"} Threat Modeling: Continuous</p>
-                            <p>{">"} Zero Trust Architecture: Enabled</p>
-                            <p>{">"} MLOps Security Governance: Active</p>
+                        <div className="space-y-4 font-mono text-sm text-muted-foreground">
+                            <p>{">"} STIG Compliance Enforcement</p>
+                            <p>{">"} Enterprise Risk Mitigation</p>
+                            <p>{">"} Zero Trust Architecture (ZTA)</p>
+                            <p>{">"} Multi-platform Governance</p>
                         </div>
                     </div>
                 </motion.div>

@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 export function Hero() {
     return (
         <section className="relative min-h-[90vh] flex flex-col justify-center px-6 lg:px-12 py-24 overflow-hidden">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,oklch(0.25_0.05_240/0.15),transparent_70%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,oklch(0.42_0_0/0.03),transparent_70%)]" />
 
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -20,34 +20,35 @@ export function Hero() {
                 </span>
 
                 <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-[1.1]">
-                    Modernizing Infrastructure at <br />
-                    <span className="text-primary italic">Global Scale.</span>
+                    15 Years of <br />
+                    <span className="text-muted-foreground italic tracking-tighter">Large-Scale Transformation.</span>
                 </h1>
 
                 <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed transition-colors mb-10 max-w-2xl">
-                    Expertise in Federal and Private Sector modernization with
-                    <span className="text-foreground font-semibold"> $100M+ budget management.</span> Advancing digital transformation through MLOps and secure architecture.
+                    Leading 0-1 and 1-N product development for high-impact environments. Managing
+                    <span className="text-foreground font-semibold"> $130M+ budgets </span> and delivering secure, user-centered modernization for the
+                    <span className="text-foreground"> Federal and Private sectors.</span>
                 </p>
 
                 <div className="flex flex-wrap gap-4">
-                    <Button size="lg" className="rounded-full px-8 h-12 text-base">
-                        View Strategy & Impact
+                    <Button size="lg" className="rounded-full px-8 h-12 text-base bg-foreground text-background hover:bg-muted-foreground">
+                        Strategy & Impact
                         <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
-                    <Button variant="outline" size="lg" className="rounded-full px-8 h-12 text-base">
-                        Credentials
+                    <Button variant="outline" size="lg" className="rounded-full px-8 h-12 text-base border-border hover:bg-secondary/20">
+                        Professional Experience
                     </Button>
                 </div>
             </motion.div>
 
             <motion.div
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 0.5 }}
+                animate={{ opacity: 0.3 }}
                 transition={{ delay: 1, duration: 2 }}
                 className="absolute bottom-12 right-12 hidden lg:block"
             >
                 <div className="text-right text-xs font-mono uppercase tracking-[0.3em] text-muted-foreground vertical-lr">
-                    Established MDCCXX
+                    PMP | CISM CERTIFIED
                 </div>
             </motion.div>
         </section>
