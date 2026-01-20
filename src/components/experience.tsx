@@ -4,42 +4,88 @@ import { motion } from "framer-motion";
 
 const experiences = [
     {
-        company: "U.S. Department of State",
+        company: "U.S. Department of State (OCST)",
         role: "Senior Product Manager",
-        period: "2020 - 2025",
+        period: "Mar 2020 - Sep 2025",
         achievements: [
-            "Scaled Online Passport Renewal to 70k apps/week",
-            "Managed $130M+ budget across 10 product lines",
-            "Achieved 95% positive feedback via usability testing",
-            "Cut release cycles from 6 months to 2 weeks"
+            "Scaled Online Passport Renewal to 70k apps/week (20% faster fulfillment)",
+            "95% positive feedback rate via deep-dive usability testing",
+            "70% user adoption of modernized comms system across 200 missions",
+            "Cut deployment failures by 50% via Salesforce workflow optimization",
+            "Built repeatable launch framework used across 5+ product lines"
+        ]
+    },
+    {
+        company: "U.S. Department of State (OCST)",
+        role: "Branch Chief (Acting)",
+        period: "Dec 2023 - Apr 2024",
+        achievements: [
+            "Managed $130M budget and 265 personnel across 10 product lines",
+            "Boosted team performance 20% by redesigning roles and metrics",
+            "Reduced decision-making bottlenecks by 40% via portfolio initiatives"
         ]
     },
     {
         company: "Accenture Federal Services",
         role: "Consultant, Product Management",
-        period: "2017 - 2020",
+        period: "Aug 2017 - Mar 2020",
         achievements: [
-            "Launched automated STIG Vulnerability Remediation Platform",
-            "Reduced vulnerability mitigation time by 40%",
-            "Led AI/ML research identifying 10+ federal use cases"
+            "Launched 0-1 STIG Vulnerability Remediation Platform (40% faster mitigation)",
+            "Accelerated delivery velocity by 30% via backlog prioritization",
+            "Launched 3 federal AI/ML pilot projects (AI Vision, Workflow Intelligence)"
         ]
     },
     {
         company: "Phase One Consulting Group",
         role: "Consultant, Risk Management",
-        period: "2016 - 2017",
+        period: "Jun 2016 - Aug 2017",
         achievements: [
-            "Accelerated VHA PMO projects by 6 months",
-            "Structured risk mitigation for 15+ complex projects"
+            "6 months schedule acceleration across 15 VHA PMO projects",
+            "Early risk detection and structured mitigation planning"
         ]
     },
     {
         company: "FundsFlo, Inc.",
         role: "Lead Product Manager",
-        period: "2016",
+        period: "Jan 2016 - May 2016",
         achievements: [
-            "Decreased time-to-market to 4 months",
-            "Implemented automated testing using Python/Selenium"
+            "Decreased time-to-market to 4 months via rapid prototyping",
+            "Reduced functional test durations by 50% via Python/Selenium"
+        ]
+    },
+    {
+        company: "LDC Artist Representation",
+        role: "Consultant",
+        period: "Oct 2015 - Jan 2016",
+        achievements: [
+            "Built agent-custom digital infrastructure within 3 months"
+        ]
+    },
+    {
+        company: "EXP Culture, LLC",
+        role: "Founder (Startup), Product Manager",
+        period: "Feb 2015 - Oct 2015",
+        achievements: [
+            "Developed bootstrap business model and MVP via stakeholder interviews",
+            "Produced localized events with partners including Red Bull"
+        ]
+    },
+    {
+        company: "Nyoo Co.",
+        role: "Founder (Startup), Talent Manager",
+        period: "Aug 2014 - Oct 2015",
+        achievements: [
+            "Established boutique talent management operations"
+        ]
+    },
+    {
+        company: "Unison Marketplace (FedBid)",
+        role: "Software QA Analyst",
+        period: "Dec 2012 - Apr 2014",
+        achievements: [
+            "Increased QA test completion by 50% via Selenium automation",
+            "Maintained <2% defect rate for monthly production releases",
+            "Led mobile integration testing of the FedBid web application"
         ]
     }
 ];
