@@ -58,9 +58,6 @@ export function Hero() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
                     </div>
-                    {/* Decorative element */}
-                    <div className="absolute -bottom-6 -right-6 w-32 h-32 border-r-2 border-b-2 border-foreground/20 rounded-br-2xl -z-10" />
-                    <div className="absolute -top-6 -left-6 w-32 h-32 border-l-2 border-t-2 border-foreground/20 rounded-tl-2xl -z-10" />
                 </motion.div>
             </div>
 
