@@ -31,12 +31,12 @@ To fix the current error, your **Build Configuration** in Cloudflare must match 
 | **Framework Preset** | `None` |
 | **Build Command** | `npm run build` |
 | **Build Output Directory** | `out` |
-| **Deploy Command** | `echo "Skipping manual deploy"` |
+| **Deploy Command** | `echo "Done"` |
 
 ### Why it was failing:
-The `Authentication error [code: 10000]` happens because the manual `wrangler` command requires a token with specific "Cloudflare Pages" permissions.
+Cloudflare Pages' Wrangler integration (Beta) creates a conflict: it skips the build if the command is missing from the file, but fails validation if you add it.
 
-**However, Cloudflare Pages already deploys your site automatically.** By setting the command to `echo`, you satisfy the dashboard's "required" validation without triggering an authorized API call.
+**I have removed `wrangler.jsonc` from the repository.** This is the most reliable way to ensure Cloudflare follows your Dashboard settings.
 
 ## Fix Steps in Cloudflare Dashboard:
 1. Select your project in **Workers & Pages** > **Pages** tab.

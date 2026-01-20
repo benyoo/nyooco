@@ -55,10 +55,10 @@ export function Hero() {
                     <div className="relative aspect-[3/4] max-w-md mx-auto overflow-hidden rounded-2xl border-2 border-border/60 bg-card/20 shadow-2xl p-0.5">
                         <div className="relative h-full w-full overflow-hidden rounded-[calc(var(--radius)+4px)]">
                             <Image
-                                src="/profile-portrait.jpg"
+                                src="/profile-portrait.png"
                                 alt="Ben Yoo - Senior Product Manager"
                                 fill
-                                className="object-cover grayscale contrast-125"
+                                className="object-cover"
                                 priority
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
