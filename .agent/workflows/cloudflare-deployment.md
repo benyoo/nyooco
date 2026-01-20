@@ -17,27 +17,35 @@ Follow these steps to deploy the portfolio to Cloudflare Pages.
 3. **Select Repository**: Select `benyoo/nyooco`.
 ## Correct Build Settings
 
-To fix the current error, your **Build Configuration** in Cloudflare must match this exactly:
+To fix the current error, your **Build Configuration** in Cloudflare must match this exactly. 
+
+> [!IMPORTANT]
+> **Are you in the right place?**
+> If you see a field called **"Deploy command"**, you are likely in the **Workers** dashboard.
+> 1. Go to **Workers & Pages**.
+> 2. Ensure you select the **Pages** tab at the top.
+> 3. Click **Create a project** > **Connect to Git**.
 
 | Setting | Value |
 | :--- | :--- |
-| **Framework Preset** | `Next.js` |
+| **Framework Preset** | `None` (Selecting `None` helps avoid required field errors) |
 | **Build Command** | `npm run build` |
 | **Build Output Directory** | `out` |
-| **Deploy Command** | **(LEAVE COMPLETELY BLANK)** |
 
 ### Why it's failing:
-The error `Authentication error [code: 10000]` or `Missing entry-point` happens because a manual **"Deploy Command"** (like `npx wrangler pages deploy`) is being triggered. 
+The error `Authentication error [code: 10000]` or `Missing entry-point` happens because the system is expecting a Worker script (like `_worker.js`) but we are deploying a **Static Portfolio**. 
 
-Cloudflare Pages Git integration **automatically** deploys your site from the `out` directory as soon as `npm run build` finishes. You do not need (and should not use) a manual deploy command.
+**Static** projects only need the `out` folder. They do not need a "Deploy command".
 
 ## Fix Steps in Cloudflare Dashboard:
-1. Select your project in **Workers & Pages**.
+1. Select your project in **Workers & Pages** > **Pages** tab.
 2. Click **Settings** > **Build & deployments**.
 3. Under **Configure Build Settings**, click **Edit**.
-4. **DELETE** the text in the **Deploy command** field so it is totally empty.
-5. Click **Save**.
-6. Go back to your latest deployment and click **Retry deployment**.
+4. Set **Framework preset** to `None`.
+5. Set **Build command** to `npm run build`.
+6. Set **Build output directory** to `out`.
+7. **SAVE**.
+8. Go back to your latest deployment and click **Retry deployment**.
 
 
 ## Automatic Deploys
