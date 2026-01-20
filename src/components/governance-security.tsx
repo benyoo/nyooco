@@ -7,7 +7,7 @@ const credentials = [
     {
         title: "Project Management Professional (PMP)",
         issuer: "PMI",
-        description: "Cert #3130356 | Expert oversight of $130M+ infrastructure portfolios.",
+        description: "Cert #3130356 | Expert oversight of federal portfolios.",
         icon: <Award className="h-5 w-5" />,
     },
     {
@@ -27,7 +27,7 @@ export function GovernanceSecurity() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">Governance & Security</h2>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">Certifications</h2>
                     <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                         Leading product development with a security-first mindset. Specializing in high-governance environments
                         where data integrity and regulatory compliance are non-negotiable.
