@@ -31,12 +31,12 @@ To fix the current error, your **Build Configuration** in Cloudflare must match 
 | **Framework Preset** | `None` |
 | **Build Command** | `npm run build` |
 | **Build Output Directory** | `out` |
-| **Deploy Command** | `npx wrangler pages deploy` (Only if required) |
+| **Deploy Command** | `echo "Skipping manual deploy"` |
 
 ### Why it was failing:
-The error `Missing entry-point` or `Must specify a directory` occurs because the system doesn't know where your built files are located during the deploy step. 
+The `Authentication error [code: 10000]` happens because the manual `wrangler` command requires a token with specific "Cloudflare Pages" permissions.
 
-I have added a [wrangler.jsonc](file:///home/benyoo/Dev/nyooco/wrangler.jsonc) to your project that fixes this by explicitly pointing to the `out` directory.
+**However, Cloudflare Pages already deploys your site automatically.** By setting the command to `echo`, you satisfy the dashboard's "required" validation without triggering an authorized API call.
 
 ## Fix Steps in Cloudflare Dashboard:
 1. Select your project in **Workers & Pages** > **Pages** tab.
@@ -45,7 +45,7 @@ I have added a [wrangler.jsonc](file:///home/benyoo/Dev/nyooco/wrangler.jsonc) t
 4. Set **Framework preset** to `None`.
 5. Set **Build command** to `npm run build`.
 6. Set **Build output directory** to `out`.
-7. Set **Deploy command** to `npx wrangler pages deploy` (if the field is required).
+7. Set **Deploy command** to `echo "Done"`.
 8. **SAVE**.
 9. Go back to your latest deployment and click **Retry deployment**.
 
