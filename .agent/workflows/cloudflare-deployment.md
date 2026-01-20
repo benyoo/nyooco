@@ -28,14 +28,15 @@ To fix the current error, your **Build Configuration** in Cloudflare must match 
 
 | Setting | Value |
 | :--- | :--- |
-| **Framework Preset** | `None` (Selecting `None` helps avoid required field errors) |
+| **Framework Preset** | `None` |
 | **Build Command** | `npm run build` |
 | **Build Output Directory** | `out` |
+| **Deploy Command** | `npx wrangler pages deploy` (Only if required) |
 
-### Why it's failing:
-The error `Authentication error [code: 10000]` or `Missing entry-point` happens because the system is expecting a Worker script (like `_worker.js`) but we are deploying a **Static Portfolio**. 
+### Why it was failing:
+The error `Missing entry-point` or `Must specify a directory` occurs because the system doesn't know where your built files are located during the deploy step. 
 
-**Static** projects only need the `out` folder. They do not need a "Deploy command".
+I have added a [wrangler.jsonc](file:///home/benyoo/Dev/nyooco/wrangler.jsonc) to your project that fixes this by explicitly pointing to the `out` directory.
 
 ## Fix Steps in Cloudflare Dashboard:
 1. Select your project in **Workers & Pages** > **Pages** tab.
@@ -44,8 +45,9 @@ The error `Authentication error [code: 10000]` or `Missing entry-point` happens 
 4. Set **Framework preset** to `None`.
 5. Set **Build command** to `npm run build`.
 6. Set **Build output directory** to `out`.
-7. **SAVE**.
-8. Go back to your latest deployment and click **Retry deployment**.
+7. Set **Deploy command** to `npx wrangler pages deploy` (if the field is required).
+8. **SAVE**.
+9. Go back to your latest deployment and click **Retry deployment**.
 
 
 ## Automatic Deploys
