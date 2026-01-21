@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Linkedin, Instagram, Mail, Phone, ArrowUpRight } from "lucide-react";
+import { Linkedin, Instagram, Mail, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const contactLinks = [
@@ -22,12 +22,6 @@ const contactLinks = [
         value: "ben.jin.yoo@gmail.com",
         href: "mailto:ben.jin.yoo@gmail.com",
         icon: <Mail className="h-5 w-5" />,
-    },
-    {
-        label: "Phone",
-        value: "+1.804.304.8811",
-        href: "tel:+18043048811",
-        icon: <Phone className="h-5 w-5" />,
     },
 ];
 

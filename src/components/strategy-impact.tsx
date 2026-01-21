@@ -21,7 +21,7 @@ const caseStudies = [
         icon: <ShieldCheck className="h-6 w-6 text-foreground" />,
     },
     {
-        title: "Large-Scale PMO Modernization",
+        title: "Large-Scale PMO Risk Management",
         description: "Orchestrated risk mitigation and schedule planning for 15+ Veterans Health Administration projects.",
         impact: "6 months avg. schedule acceleration",
         tags: ["Risk Management", "PMO", "Efficiency"],
