@@ -49,7 +49,7 @@ export function Nav() {
                     <div className="w-8 h-8 rounded-lg bg-foreground flex items-center justify-center text-background group-hover:rotate-12 transition-transform">
                         B
                     </div>
-                    <span className="font-mono tracking-[0.2em] text-sm">BENYOO</span>
+                    <span className="hidden sm:inline font-mono tracking-[0.2em] text-sm">BENYOO</span>
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -67,11 +67,14 @@ export function Nav() {
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    onClick={() => setIsOpen(!isOpen)}
-                    className="lg:hidden z-50 p-2 text-foreground"
+                    onClick={() => {
+                        console.log("Mobile menu toggled. Current state:", !isOpen);
+                        setIsOpen(!isOpen);
+                    }}
+                    className="lg:hidden z-50 p-3 text-foreground flex items-center justify-center border border-border rounded-md hover:bg-foreground/10 transition-colors"
                     aria-label="Toggle Menu"
                 >
-                    {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                    {isOpen ? <X strokeWidth={2.5} /> : <Menu strokeWidth={2.5} />}
                 </button>
             </motion.nav>
 
@@ -79,19 +82,19 @@ export function Nav() {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, x: "100%" }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: "100%" }}
-                        transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                        className="fixed inset-0 z-40 bg-background/95 backdrop-blur-xl lg:hidden flex flex-col items-center justify-center"
+                        initial={{ opacity: 0, scale: 1.1 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 1.1 }}
+                        transition={{ duration: 0.2 }}
+                        className="fixed inset-0 z-[60] bg-background/98 backdrop-blur-2xl lg:hidden flex flex-col items-center justify-center"
                     >
-                        <div className="flex flex-col items-center gap-8">
+                        <div className="flex flex-col items-center gap-10">
                             {navItems.map((item, idx) => (
                                 <motion.div
                                     key={item.label}
-                                    initial={{ opacity: 0, y: 20 }}
+                                    initial={{ opacity: 0, y: 30 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: idx * 0.1 }}
+                                    transition={{ delay: idx * 0.05 }}
                                 >
                                     <Link
                                         href={item.href}
