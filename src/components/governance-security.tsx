@@ -65,8 +65,8 @@ export function GovernanceSecurity() {
                             <span className="ml-2 text-[10px] font-mono text-muted-foreground uppercase tracking-widest">Secure Product Lifecycle</span>
                         </div>
                         <div className="space-y-4 font-mono text-sm text-muted-foreground">
-                            <p>{">"} STIG Compliance Enforcement</p>
-                            <p>{">"} Enterprise Risk Mitigation</p>
+                            <p>{">"} STIG Compliance Automation</p>
+                            <p>{">"} Enterprise Risk Management</p>
                             <p>{">"} Zero Trust Architecture (ZTA)</p>
                             <p>{">"} Multi-platform Governance</p>
                         </div>
