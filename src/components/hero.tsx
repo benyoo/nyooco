@@ -11,7 +11,7 @@ export function Hero() {
         <section className="relative min-h-[90vh] flex flex-col justify-center px-6 lg:px-12 py-24 overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,oklch(0.42_0_0/0.03),transparent_70%)]" />
 
-            <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center z-10">
+            <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
