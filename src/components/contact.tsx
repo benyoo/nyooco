@@ -23,6 +23,12 @@ const contactLinks = [
         href: "mailto:ben.jin.yoo@gmail.com",
         icon: <Mail className="h-5 w-5" />,
     },
+    {
+        label: "Google Meet",
+        value: "Schedule a Chat",
+        href: "https://calendar.app.google/n81C43ZSGPGes7iL9",
+        icon: <Mail className="h-5 w-5" />,
+    },
 ];
 
 export function Contact() {
