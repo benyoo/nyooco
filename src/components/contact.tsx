@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Linkedin, Instagram, Mail, ArrowUpRight } from "lucide-react";
+import { Linkedin, Instagram, Mail, ArrowUpRight, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const contactLinks = [
@@ -27,7 +27,7 @@ const contactLinks = [
         label: "Google Meet",
         value: "Schedule a Chat",
         href: "https://calendar.app.google/n81C43ZSGPGes7iL9",
-        icon: <Mail className="h-5 w-5" />,
+        icon: <Calendar className="h-5 w-5" />,
     },
 ];
 
