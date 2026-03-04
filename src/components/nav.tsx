@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -12,9 +13,11 @@ const navItems = [
     { label: "Certifications", href: "#governance-security" },
     { label: "Domains", href: "#tech-stack" },
     { label: "Contact", href: "#contact" },
+    { label: "Blog", href: "/blog" },
 ];
 
 export function Nav() {
+    const pathname = usePathname();
     const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
@@ -58,7 +61,12 @@ export function Nav() {
                         <Link
                             key={item.label}
                             href={item.href}
-                            className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground hover:text-foreground transition-colors"
+                            className={cn(
+                                "text-[10px] uppercase tracking-widest font-bold hover:text-foreground transition-colors",
+                                !item.href.startsWith("#") && pathname.startsWith(item.href)
+                                    ? "text-foreground"
+                                    : "text-muted-foreground"
+                            )}
                         >
                             {item.label}
                         </Link>

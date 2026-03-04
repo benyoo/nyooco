@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "nextjs-dev",
+      "runtimeExecutable": "wsl",
+      "runtimeArgs": ["-d", "Ubuntu", "-e", "bash", "-c", "source ~/.nvm/nvm.sh && cd /home/benyoo/Dev/nyooco && npm run dev"],
+      "port": 3000
+    },
+    {
+      "name": "wrangler-pages",
+      "runtimeExecutable": "wsl",
+      "runtimeArgs": ["-d", "Ubuntu", "-e", "bash", "-c", "source ~/.nvm/nvm.sh && cd /home/benyoo/Dev/nyooco && npx wrangler pages dev out"],
+      "port": 8788
+    }
+  ]
+}
